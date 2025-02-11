@@ -11,15 +11,24 @@ System::System(int N, double displacement, double radius, double boxSize, int se
     this->uniformDist = std::uniform_real_distribution<double>(0, 1);
     this->displacement = displacement;
     gen = std::mt19937(seed);
+    /*
+        int nSide = static_cast<int>(boxSize / (2 * radius));
 
-    int nSide = static_cast<int>(boxSize / (2 * radius));
-
-    for (int i = 0; i < nSide && disks.size() < N; ++i)
-    {
-        for (int j = 0; j < nSide && disks.size() < N; ++j)
+        for (int i = 0; i < nSide && disks.size() < N; ++i)
         {
-            disks.push_back(Disk(i * 2 * radius, j * 2 * radius, radius));
+            for (int j = 0; j < nSide && disks.size() < N; ++j)
+            {
+                disks.push_back(Disk(i * 2 * radius, j * 2 * radius, radius));
+            }
         }
+    */
+
+    for (int i = 0; i < N; i++)
+    {
+        double x = uniform(0, boxSize);
+        double y = uniform(0, boxSize);
+        double r = uniform(0.5 * radius, 1.5 * radius);
+        disks.push_back(Disk(x, y, r));
     }
 }
 
