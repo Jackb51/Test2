@@ -1,0 +1,10 @@
+# Ignore object files and executable
+*.o
+main
+
+# Ignore the build directory that works with the makefile
+build/
+
+
+# ignore the confs
+confs/
