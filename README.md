@@ -17,3 +17,5 @@ in "disk.cpp" there was initially no method which was calculating the distance b
 The python script in "view.ipynb" and "view.py" are identical except one is on a jupyter notebook and all of this code was already functioning perfectly therefore nothing was changed here.
 
 A Makefile has been added using an example similar to what was shown in the seminar such that compilation and running of the code is much easier.
+
+To extend the code, the size of the disks has been modified to be of varying sizes as decided by a normal distribution. Furthermoe the starting positions of each disk has been modified to be disitributed randomly across the rectangular sheet. The original code still exists but has been commented out.
